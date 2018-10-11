@@ -1,0 +1,10 @@
+<h1>All the Kittens</h1>
+
+<%= link_to "Create kitten", new_kitten_url %>
+<br><br>
+<% @kittens.each do |kitten| %>
+    <%= kitten.to_string %>
+    <%= link_to "Go to #{kitten.name}", kitten %>
+    <%= link_to "Remove #{kitten.name}", kitten, method: :delete %>
+    <br><br>
+<% end %>

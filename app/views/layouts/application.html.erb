@@ -6,9 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= link_to "Home", root_path %>
   </head>
 
   <body>
+      <% flash.each do |message| %>
+          <%= message %>
+      <% end %>
     <%= yield %>
   </body>
 </html>

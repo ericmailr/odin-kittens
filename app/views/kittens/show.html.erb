@@ -1,0 +1,5 @@
+<h1>Kittens#show</h1>
+
+<%= @kitten.to_string %>
+
+<%= link_to "Edit", edit_kitten_url %> ||| <%= link_to "Remove #{@kitten.name}", @kitten, method: :delete %>
